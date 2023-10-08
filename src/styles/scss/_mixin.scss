@@ -1,0 +1,32 @@
+@mixin query($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin transition {
+  transition: 0.35s all ease-in;
+}
+
+@mixin header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include transition;
+  -webkit-box-shadow: 0px 5px 13px 3px rgba(130, 128, 128, 0.7);
+  box-shadow: 0px 5px 13px 3px rgba(130, 128, 128, 0.7);
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  background: #ecf0f1;
+  @content;
+}
+
+@mixin fontRubik {
+  font-family: "Rubik", sans-serif;
+}
+@mixin notoFont {
+  font-family: "Noto Naskh Arabic", serif;
+}
+@mixin AmiriFont {
+  font-family: 'Amiri', serif;
+}
